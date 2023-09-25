@@ -1,9 +1,10 @@
 import "./index.css";
 
-export const ListCard = ({ item, onClick }) => {
+export const ListCard = ({ item, onClick, onCheckItem }) => {
   return (
-    <div className="list-card-container" onClick={() => onClick(item)}>
+    <div className="list-card-container">
       <img
+        onClick={() => onCheckItem(item)}
         className="checkbox"
         src={`/images/${item?.checked ? "checked.svg" : "unchecked.svg"}`}
         alt="checked-item"
@@ -14,7 +15,9 @@ export const ListCard = ({ item, onClick }) => {
           {item.quantity} {item.quantity > 1 ? "unidades" : "unidade"}
         </span>
       </div>
-      <img src="/images/arrow.svg" alt="arrow-icon" className="arrow-icon" />
+      <div className="arrow-icon-container" onClick={() => onClick(item)}>
+        <img src="/images/arrow.svg" alt="arrow-icon" className="arrow-icon" />
+      </div>
     </div>
   );
 };
