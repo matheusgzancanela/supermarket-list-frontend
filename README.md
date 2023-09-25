@@ -3,7 +3,7 @@
 An application build using React, with the goal make easier creating a supermarket list
 
 <p>
-<img height="500 src="https://github.com/matheusgzancanela/supermarket-list-frontend/blob/master/public/images/supermarket.png" />
+<img height="500" src="https://github.com/matheusgzancanela/supermarket-list-frontend/blob/master/public/images/supermarket.png" />
 </p>
 
 ## Technologies Used
