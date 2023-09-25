@@ -3,7 +3,7 @@
 An application build using React, with the goal make easier creating a supermarket list
 
 <p>
-<img height="500 src="" />
+<img height="500 src="https://github.com/matheusgzancanela/supermarket-list-frontend/blob/master/public/images/supermarket.png" />
 </p>
 
 ## Technologies Used
@@ -11,6 +11,10 @@ An application build using React, with the goal make easier creating a supermark
 - React
 - CSS
 - Axios
+
+## Requirements to run:
+
+- Node.Js (https://nodejs.org/en)
 
 ## Running Instructions
 
