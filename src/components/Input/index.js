@@ -1,4 +1,4 @@
-import "./index.css";
+import './index.css'
 export const Input = ({ label, placeholder, value, onChange, type }) => {
   return (
     <div className="input-container">
@@ -8,8 +8,8 @@ export const Input = ({ label, placeholder, value, onChange, type }) => {
         value={value}
         className="input"
         placeholder={placeholder}
-        type={type || "text"}
+        type={type || 'text'}
       />
     </div>
-  );
-};
+  )
+}

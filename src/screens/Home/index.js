@@ -1,43 +1,44 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "./index.css";
-import { Button, Input } from "../../components";
-import { SAVE_USERNAME_PATH } from "../../services/constants";
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { Button, Input } from 'components'
+import { SAVE_USERNAME_PATH } from 'services/constants'
+import {
+  ScreenContainer,
+  ContentContainer,
+  BagImage,
+  Title,
+  Subtitle,
+  ButtonContainer
+} from './styles'
 
 export const HomeScreen = () => {
-  const navigate = useNavigate();
-  const [username, setUsername] = useState("");
-  console.log(username);
+  const navigate = useNavigate()
+  const [username, setUsername] = useState('')
+  console.log(username)
 
   const onClickContinue = () => {
     if (username.length < 3) {
-      alert("Username deve contar mais do que 3 caracteres!");
-      return;
+      alert('Username deve contar mais do que 3 caracteres!')
+      return
     }
-    localStorage.setItem(SAVE_USERNAME_PATH, username);
-    navigate("/list");
-  };
+    localStorage.setItem(SAVE_USERNAME_PATH, username)
+    navigate('/list')
+  }
 
   return (
-    <div className="home-screen-container">
-      <div className="home-screen-content-container">
-        <img
-          alt="shopping-bag"
-          className="shopping-bag-image"
-          src="/images/shopping-bag.svg"
-        />
+    <ScreenContainer>
+      <ContentContainer>
+        <BagImage />
 
-        <h1 className="home-screen-title">
-          Sua lista de supermercado mais fácil do que nunca
-        </h1>
+        <Title>Sua lista de supermercado mais fácil do que nunca</Title>
 
-        <h3 className="home-screen-subtitle">
+        <Subtitle>
           Ajudamos você a organizar sua lista de compras de forma descomplicada.
-        </h3>
+        </Subtitle>
 
-        <h3 className="home-screen-subtitle-description">
+        <Subtitle mw={452} align="left" mb={16}>
           Digite abaixo seu usuário para ter acesso a sua lista de compras:
-        </h3>
+        </Subtitle>
 
         <Input
           onChange={(text) => setUsername(text)}
@@ -45,10 +46,11 @@ export const HomeScreen = () => {
           label="Username"
           placeholder="Digite aqui seu usuário."
         />
-        <div className="home-screen-button-container">
+
+        <ButtonContainer>
           <Button onClick={onClickContinue}>Continuar</Button>
-        </div>
-      </div>
-    </div>
-  );
-};
+        </ButtonContainer>
+      </ContentContainer>
+    </ScreenContainer>
+  )
+}
