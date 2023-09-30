@@ -1,5 +1,5 @@
-import { ListCard } from '../molecules/ListCard'
-import './index.css'
+import { ListCard } from 'components/molecules/ListCard'
+import { RenderContainer } from './styles'
 
 export const ListRender = ({ list, onEdit, onCheckItem }) => {
   if (list?.length === 0) {
@@ -12,7 +12,7 @@ export const ListRender = ({ list, onEdit, onCheckItem }) => {
   }
 
   return (
-    <div className="list-render-container">
+    <RenderContainer>
       {list.map((item) => (
         <ListCard
           onCheckItem={onCheckItem}
@@ -21,6 +21,6 @@ export const ListRender = ({ list, onEdit, onCheckItem }) => {
           key={item?._id}
         />
       ))}
-    </div>
+    </RenderContainer>
   )
 }
