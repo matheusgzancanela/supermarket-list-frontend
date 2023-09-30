@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './index.css'
-import { Input } from '../Input'
+import { Input } from '../molecules/Input'
 import { Button } from '../atoms/Button'
 import { Title } from 'components/atoms'
 import { createItem, updateItem, deleteItem } from 'services/request'
